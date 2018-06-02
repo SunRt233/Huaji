@@ -10,10 +10,9 @@ import android.support.v7.widget.*;
 import android.view.*;
 import android.widget.*;
 import com.huaji.installer.fragments.*;
-
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import cn.bmob.v3.*;
+
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -28,6 +27,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
+		
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -44,8 +44,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 		setExitMode(EXIT_MODE_TWICE);
 		
 		
-		//startActivity(new Intent(getApplicationContext(),AboutActivity.class));
-	}
+}
 	
 	private void initViewId()
 	{

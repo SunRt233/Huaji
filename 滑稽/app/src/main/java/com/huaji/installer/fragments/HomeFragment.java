@@ -11,8 +11,7 @@ import android.support.v7.widget.Toolbar;
 
 public class HomeFragment extends Fragment
 {
-	View view;
-	private Button bn;
+	private View view;
 	private Toolbar toolbar;
 
 	@Override
@@ -20,19 +19,6 @@ public class HomeFragment extends Fragment
 	{
 		// TODO: Implement this method
 		view = inflater.inflate(R.layout.fragment_home,container,false);
-		bn = (Button) view.findViewById(R.id.fragmenthomeButton1);
-		
-		
-		bn.setOnClickListener(new OnClickListener(){
-
-				@Override
-				public void onClick(View p1)
-				{
-					// TODO: Implement this method
-					
-				}
-			});
-			
 		setHasOptionsMenu(true);
 		
 		return view;
