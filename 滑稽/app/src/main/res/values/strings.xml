@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">滑稽</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="title_status">状态</string>
+	<string name="title_gba">GBA模拟器</string>
+
+	
+	<string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+	
+</resources>

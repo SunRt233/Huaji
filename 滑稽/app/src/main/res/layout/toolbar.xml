@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com-auto/apk/res"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+	android:background="?attr/colorPrimary"
+	android:elevation="4dp">
+	
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/id_toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		app:popupTheme="@style/AppTheme.PopupOverlay"
+		android:theme="@style/AppTheme.AppBarOverlay"/>
+    
+</LinearLayout>

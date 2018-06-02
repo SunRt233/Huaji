@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:app="http//schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="top"
+	android:orientation="vertical"
+	android:fitsSystemWindows="true">
+	
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/mainAppBarLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="?attr/colorPrimary"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			app:layout_collapseMode="pin"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			app:popupTheme="@style/AppTheme.PopupOverlay"
+			android:background="#00FFFFFF"/>
+		
+	</android.support.design.widget.AppBarLayout>
+
+	<TextView
+		android:text="你的名字是？[请不要乱选！！！]"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="孙如泰"
+			android:id="@+id/mainButton1"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="李增鑫"
+			android:id="@+id/mainButton2"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="周毅"
+			android:id="@+id/mainButton3"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="徐山"
+			android:id="@+id/mainButton4"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="王言"
+			android:id="@+id/mainButton5"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="李信"
+			android:id="@+id/mainButton6"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="李东青"
+			android:id="@+id/mainButton7"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="李跃妍"
+			android:id="@+id/mainButton8"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="郭晓泉"
+			android:id="@+id/mainButton9"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="薛尧"
+			android:id="@+id/mainButton10"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

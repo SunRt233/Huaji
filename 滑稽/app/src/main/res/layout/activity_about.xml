@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:background="#FFFFFFFF"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#FFFFFFFF"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.CardView 
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_gravity="center"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardBackgroundColor="#FFFFFFFF"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="true">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="#FFFFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="match_parent"
+
+                            android:scaleType="fitXY" />
+                        <TextView
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:text="AIDE手册" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:padding="15dp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:onClick="OnShareLayout">
+                        <TextView
+                            android:textSize="15sp"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="分享应用" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:padding="15dp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:onClick="OnjzLayout">
+                        <TextView
+                            android:textSize="15sp"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="捐赠支持" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:background="#FFFFFFFF"
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp">
+                        <TextView
+                            android:textSize="15sp"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="软件版本" />
+                        <TextView
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Version-1.1-Copyright © 2017 陌南尘 .All Rights Reserved" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_gravity="center"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardBackgroundColor="#FFFFFFFF"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="true">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="#FFFFFFFF"
+                    android:padding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="介绍" />
+                    <TextView
+                        android:textSize="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="该软件是一款针对AIDE在安卓手机端使用方法的软件，部分教程来源于百度aide吧，其余为作者纯手写而成，是网上仅有的少数针对在安卓手机上进行软件开发的教程之一，内容通俗易懂，完全面向小白使用，零基础学习开发安卓软件。" />
+                    <TextView
+                        android:textSize="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="AIDE是一个运行在安卓系统上的Android Java集成开发环境，支持安卓程序开发的编写-编译-调试-运行整个周期，可用来开发Android应用程序、Java应用程序或PhoneGap应用程序，使用Java、c/c++、HTML5、CSS和JavaScript语言，拥有Dropbox和Git集成，与Eclipse和Android Studio兼容，支持智能代码完成、生命错误检查、重构和代码导航。" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView 
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_gravity="center"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardBackgroundColor="#FFFFFFFF"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="true">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="#FFFFFFFF"
+                    android:padding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="备注" />
+                    <TextView
+                        android:textSize="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="如果你喜欢这个应用或对你有所帮助，可以请作者吃包辣条。如果有什么建议可直接联系作者进行反馈。(๑•̀ㅂ•́)و✧" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

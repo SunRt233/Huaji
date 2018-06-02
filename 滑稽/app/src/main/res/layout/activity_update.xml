@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="300dp"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:paddingTop="20dp"
+	android:paddingBottom="18dp"
+	android:background="#F9F9F9"
+	android:gravity="top">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:id="@+id/activityupdateLinearLayout1"
+		android:layout_marginRight="26dp"
+		android:layout_marginLeft="26dp">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:text="标题"
+			android:textColor="#1B1B1B"
+			android:layout_marginBottom="10dp"
+			android:id="@+id/activityupdateTitle"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:text="内容"
+			android:textColor="#2C2C2B"
+			android:layout_marginBottom="10dp"
+			android:textSize="20sp"
+			android:id="@+id/activityupdateDescription"/>
+
+	</LinearLayout>
+
+	<FrameLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_gravity="bottom"
+		android:layout_marginLeft="12dp"
+		android:layout_marginRight="12dp">
+
+		<Button
+			style="@style/Widget.AppCompat.Button.Borderless"
+			android:theme="@style/Theme.AppCompat.Light"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="下次再说"
+			android:textColor="#2196F3"
+			android:id="@+id/activityupdateButtonNav"/>
+
+		<Button
+			style="@style/Widget.AppCompat.Button.Borderless"
+			android:theme="@style/Theme.AppCompat.Light"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="更新"
+			android:layout_gravity="right"
+			android:textColor="#2196F3"
+			android:id="@+id/activityupdateButtonOk"/>
+
+	</FrameLayout>
+
+</LinearLayout>
+

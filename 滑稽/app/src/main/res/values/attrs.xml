@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<declare-styleable name="THEME">
+        <attr name="colorPrimaryLight" format="color"/>
+		<attr name="tabindicatorColor" format="color"/>
+		<attr name="BlueTheme" format="color"/>
+		<attr name="GreenTheme" format="color"/>
+		<attr name="WhiteTheme" format="color"/>
+    </declare-styleable>
+	
+	<declare-styleable name="MyCardViewButton">
+		<attr name="Text" format="string"/>
+		<attr name="subText" format="string"/>
+		<attr name="imgSrc" format="reference"/>
+		<attr name="imgPosition">
+			<enum name="top" value="0"/>
+			<enum name="bottom" value="1"/>
+			<enum name="right" value="2"/>
+			<enum name="left" value="3"/>
+		</attr>
+	</declare-styleable>
+	
+</resources>

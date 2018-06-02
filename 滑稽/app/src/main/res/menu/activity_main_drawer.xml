@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_homepage"
+            android:title="主页" />
+        <item
+            android:id="@+id/nav_study"
+            android:title="学习" />
+		<item
+			android:id="@+id/nav_music"
+			android:title="音乐" />
+        <item
+            android:id="@+id/nav_fiction"
+            android:title="小说" />
+		<item 
+			android:id="@+id/nav_net"
+			android:title="搜索"/>
+         
+    </group>
+
+    <item android:title="更多">
+        <menu>
+            <!--<item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="分享" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="发送反馈" />-->
+			<item
+				android:id="@+id/nav_setting"
+				
+				android:title="设置" />
+			<item 
+				android:id="@+id/nav_about"
+			 
+				android:title="关于"/>
+        </menu>
+    </item>
+
+</menu>

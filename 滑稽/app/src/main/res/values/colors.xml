@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary_Blue">#1E88E5</color>
+    <color name="colorPrimaryDark_Blue">#1565C0</color>
+    <color name="colorPrimaryLight_Blue">#448AFF</color>
+	<color name="colorAccent_Blue">#1E88E5</color>
+	<color name="tabindicatorColor_Blue">#4FC3F7</color>
+	
+	<color name="colorPrimary_Green">#4CAF50</color>
+    <color name="colorPrimaryDark_Green">#388E3C</color>
+    <color name="colorPrimaryLight_Green">#69F0AE</color>
+	<color name="colorAccent_Green">#4CAF50</color>
+	<color name="tabindicatorColor_Green">#69F0AE</color>
+</resources>
