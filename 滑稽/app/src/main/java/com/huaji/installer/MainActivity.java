@@ -47,7 +47,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
 		setExitMode(EXIT_MODE_TWICE);
 
-
+ 
 	}
 	
 	private void SetStuatsBar(Activity activity) {
