@@ -13,14 +13,14 @@
 		app:cardCornerRadius="5dp"
 		app:cardElevation="5dp"
 		app:cardBackgroundColor="?attr/colorPrimary"
-		android:layout_margin="12dp"
-		android:padding="12dp">
+		android:layout_margin="12dp">
 
 		<LinearLayout
 			android:layout_height="match_parent"
 			android:layout_width="match_parent"
 			android:orientation="vertical"
-			android:gravity="center|center_vertical|top">
+			android:gravity="center|center_vertical|top"
+			android:background="@drawable/mchbg_10">
 
 			<TextView
 				android:layout_height="wrap_content"

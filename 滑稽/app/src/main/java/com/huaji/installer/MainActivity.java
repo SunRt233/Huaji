@@ -13,6 +13,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.graphics.*;
 import android.app.Activity;
+import android.content.*;
+import android.widget.RelativeLayout.*;
+import android.support.v4.graphics.*;
+import android.support.annotation.*;
 
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener
@@ -32,13 +36,18 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 
-		SetStuatsBar(this);
+		//SetStuatsBar(this);
+		
+		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
+		{
+			Window window = getWindow();                            
+			window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+		}
 
 		setContentView(R.layout.activity_main);
 
 		initViewId();
 		initToolbar();
-
 
 		ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
 			this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -46,8 +55,37 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         toggle.syncState();
 
 		setExitMode(EXIT_MODE_TWICE);
-
+		
+		try{
+		setToolbarFitStatus(toolbar);
+		}
+		catch(Throwable e)
+		{
+			printToast(e.toString(),Toast.LENGTH_LONG);
+		}
+		
+		
+		toolbar.setBackgroundColor(Color.parseColor("#00FFFFFF"));
  
+	}
+	
+	public void setToolbarFitStatus(Toolbar t)
+	{
+		ViewGroup.LayoutParams l =  t.getLayoutParams();
+		int toolbarHeight = l.height;
+		int statusBarHeight = getStatusBarHeight(getApplicationContext());
+		l.height =  + statusBarHeight;
+		t.setLayoutParams(l);
+	}
+	
+	public static int getStatusBarHeight(Context context) {
+		int result = 0;
+		int resourceId = context.getResources().getIdentifier(
+			"status_bar_height", "dimen", "android");
+		if (resourceId > 0) {
+			result = context.getResources().getDimensionPixelSize(resourceId);
+		}
+		return result;
 	}
 	
 	private void SetStuatsBar(Activity activity) {
