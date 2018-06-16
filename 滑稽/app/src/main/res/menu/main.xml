@@ -8,5 +8,10 @@
 	<item
 		android:id="@+id/gba"
 		android:title="GBA游戏模拟器"/>
+	
+	<item
+		android:title="日历"
+		android:icon="@drawable/ic_menu_calendar"
+		app:showAsAction="always|collapseActionView"/>
     
 </menu>

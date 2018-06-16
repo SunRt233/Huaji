@@ -14,6 +14,7 @@ buildscript {
 
 allprojects {
     repositories {
-		maven { url "file:///storage/emulated/0/.aide/test/cn/"
+		jcenter()
+		
     }
 }

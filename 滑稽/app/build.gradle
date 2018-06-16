@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.huaji.installer"
-        minSdkVersion 19
+        minSdkVersion 17
         targetSdkVersion 24
         versionCode 2
         versionName "2.0"
@@ -27,5 +27,7 @@ dependencies {
 	compile 'com.android.support:support-v4:+'
 	compile 'com.android.support:design:+'
 	compile 'com.android.support:appcompat-v7:+'
+	compile 'com.github.sundeepk:compact-calendar-view:2.0.2.3'
+
 	compile fileTree(dir: 'libs', include: ['*.jar'])
 }

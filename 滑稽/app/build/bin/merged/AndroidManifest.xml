@@ -5,12 +5,13 @@
     android:versionName="2.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="17"
         android:targetSdkVersion="24" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
 
     <application
         android:allowBackup="true"
@@ -18,8 +19,12 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.huaji.installer.IndexActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            android:name="com.huaji.installer.ui.activity.IndexActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
+        </activity>
+        <activity
+            android:name="com.huaji.installer.ui.activity.MainActivity"
+            android:label="滑稽安装器v1.0版" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,16 +32,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.huaji.installer.MainActivity"
+            android:name="com.huaji.installer.ui.activity.InstallActivity"
             android:label="滑稽安装器v1.0版" />
         <activity
-            android:name="com.huaji.installer.InstallActivity"
-            android:label="滑稽安装器v1.0版" />
-        <activity
-            android:name="com.huaji.installer.AboutActivity"
+            android:name="com.huaji.installer.ui.activity.AboutActivity"
             android:label="关于" />
         <activity
-            android:name="com.huaji.installer.UpdateActivity"
+            android:name="com.huaji.installer.ui.activity.UpdateActivity"
             android:label="更新"
             android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
 

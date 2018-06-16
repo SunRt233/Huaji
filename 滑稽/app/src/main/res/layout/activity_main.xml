@@ -13,55 +13,46 @@
 		android:layout_width="match_parent"
 		android:orientation="vertical">
 
-		<LinearLayout
-			android:id="@+id/activity_mainAppBarLayout"
+		<android.support.design.widget.AppBarLayout
+			android:id="@+id/app_bar_layout"
 			android:layout_width="match_parent"
-			android:layout_height="200dp"
-			android:orientation="vertical"
-			android:elevation="4dp"
-			android:background="@drawable/mchbg_10">
+			android:layout_height="wrap_content"
+			android:background="?attr/colorPrimary"
+			app:elevation="0dp">
 
 			<android.support.v7.widget.Toolbar
 				android:id="@+id/Maintoolbar"
 				android:layout_width="match_parent"
 				android:layout_height="?attr/actionBarSize"
-				android:background="?attr/colorPrimary"
+				android:background="#00FFFFFF"
 				app:popupTheme="@style/AppTheme.PopupOverlay"
 				android:theme="@style/AppTheme.AppBarOverlay"/>
 
-			<LinearLayout
-				android:layout_height="fill_parent"
+			<com.github.sundeepk.compactcalendarview.CompactCalendarView
+				android:id="@+id/compactcalendar_view"
 				android:layout_width="match_parent"
-				android:paddingTop="25dp"
-				android:orientation="vertical">
+				android:layout_height="200dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				app:compactCalendarTargetHeight="200dp"
+				app:compactCalendarBackgroundColor="?attr/colorPrimary"
+				app:compactCalendarCurrentDayBackgroundColor="#2979FF"
+				app:compactCalendarCurrentSelectedDayBackgroundColor="#2962FF"
+				app:compactCalendarTextColor="#FFFFFF"
+				app:compactCalendarTextSize="16sp"/>
 
-				<TextView
-					android:id="@+id/activity_main_calendarView_year"
-					android:layout_height="wrap_content"
-					android:layout_width="match_parent"
-					android:gravity="center"
-					android:text="2018年"
-					android:textColor="#FFFFFF"
-					android:textSize="28sp"/>
-				
-				<TextView
-					android:id="@+id/activity_main_calendarView_year"
-					android:layout_height="wrap_content"
-					android:layout_width="match_parent"
-					android:gravity="center"
-					android:text="6月7日"
-					android:textColor="#FFFFFF"
-					android:paddingTop="4dp"
-					android:textSize="24sp"/>
+		</android.support.design.widget.AppBarLayout>
 
-			</LinearLayout>
-
-		</LinearLayout>
+		<View
+			android:background="@drawable/app_bar_elevation"
+			android:layout_height="4dp"
+			android:layout_width="match_parent"/>
 
 		<FrameLayout
-			android:id="@+id/activity_mainFrameLayout"
-			android:layout_height="match_parent"
-			android:layout_width="match_parent"/>
+			android:id="@+id/activity_mainFrameLayout1"
+			android:layout_height="fill_parent"
+			android:layout_width="match_parent"
+			android:orientation="vertical"/>
 
 	</LinearLayout>
 
