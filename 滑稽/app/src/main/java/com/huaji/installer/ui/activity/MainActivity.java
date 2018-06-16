@@ -1,6 +1,7 @@
 package com.huaji.installer.ui.activity;
 
 import android.app.*;
+import android.graphics.*;
 import android.os.*;
 import android.support.design.widget.*;
 import android.support.v4.app.*;
@@ -20,6 +21,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import com.huaji.installer.R;
+import android.content.res.*;
+import org.xmlpull.v1.*;
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -27,22 +30,24 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 	private DrawerLayout drawer;
 	private NavigationView nav;
 	private FrameLayout f;
-	//private Fragment fiction = new FictionFragment();
-	private CompactCalendarView calendar;
+	private CompactCalendarView calendar = null;
 	private Fragment currentFragment = null;
-	Fragment from = null;
-	Fragment homeFragment = new HomeFragment();
-	Fragment fictionFragment = new FictionFragment();
+	private Fragment homeFragment = new HomeFragment();
+	private Fragment fictionFragment = new FictionFragment();
 
 	public CompactCalendarView getCalendar()
 	{
+		if(calendar == null)
+		{
+			View v = getLayoutInflater().inflate(R.layout.activity_main,null);
+			calendar = (CompactCalendarView) v.findViewById(R.id.compactcalendar_view);
+		}
 		return calendar;
 	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 
@@ -65,9 +70,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         toggle.syncState();
 
 		setExitMode(EXIT_MODE_TWICE);
-
-		calendar = (CompactCalendarView) findViewById(R.id.compactcalendar_view);
-
 
 	}
 
@@ -113,8 +115,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 		drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 		nav = (NavigationView) findViewById(R.id.nav_view);
 		f = (FrameLayout) findViewById(R.id.activity_mainFrameLayout1);
-
+		calendar = (CompactCalendarView) findViewById(R.id.compactcalendar_view);
 		nav.setNavigationItemSelectedListener(this);
+		
 	}
 
 	private void initToolbar()
@@ -139,12 +142,16 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 					break;
 				case R.id.nav_fiction:
 					switchFragment(fictionFragment, R.id.activity_mainFrameLayout1, "fictionFragment");
+					if(calendar.getLayoutParams().height!=0)
+					{
+						calendar.hideCalendar();
+					}
 					break;
 			}
 		}
 		catch (Throwable e)
 		{
-			printToast(e.toString(),10);
+			printToast(e.toString(),1);
 		}
 		return true;
 	}
@@ -180,129 +187,4 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 		}
 	}
 	
-	public void showFragment(int id, Fragment f, String tag)
-	{
-		FragmentManager manager = getSupportFragmentManager();
-		FragmentTransaction transaction = manager.beginTransaction();
-		transaction.add(id, f, tag).commit();
-	}
-
-//	private void switchFragment(BaseFragment targetFragment, int id, String tag)
-//	{
-//		FragmentManager manager = getSupportFragmentManager();
-//		FragmentTransaction transaction = manager.beginTransaction();
-//
-//		if (currentFragment == null)
-//		{
-//			targetFragment.setIsAdded(true);
-//			targetFragment.setPrivateTag(tag);
-//			transaction
-//				.add(id, targetFragment)
-//				.commit();
-//			printToast("初始化", 0);
-//
-//
-//			currentFragment = targetFragment;
-//		}
-//		else
-//		{
-//			if (targetFragment.getAddedStatus() == true&&currentFragment.getPrivateTag() != tag)
-//			{
-//				targetFragment.setIsAdded(true);
-//				transaction
-//					.hide(currentFragment)
-//					.show(targetFragment)
-//					.commit();
-//				printToast("显示成功",0);
-//				
-//				currentFragment = targetFragment;
-//			}
-//			if(targetFragment.getAddedStatus() == false&&currentFragment.getPrivateTag() != tag)
-//			{
-//				targetFragment.setIsAdded(true);
-//				targetFragment.setPrivateTag(tag);
-//				transaction
-//					.hide(currentFragment)
-//					.add(id, targetFragment)
-//					.commit();
-//				printToast("添加成功",0);
-//				
-//				currentFragment = targetFragment;
-//			}
-//			else if(targetFragment.getAddedStatus() == true&&currentFragment.getPrivateTag() == tag)
-//			{
-//				printToast("重复",0);
-//			}
-//
-//			
-//		}
-//		/*
-//		 if (currentFragment == null)
-//		 {
-//		 Log.v("srt","cxh");
-//
-//		 transaction
-//		 .add(id, targetFragment)
-//		 .commit();
-//		 printToast("初始化",1);
-//
-//		 currentFragment = targetFragment;
-//		 //printToast(currentFragment.getTag(),1);
-//		 }
-//		 //		else if(currentFragment.getTag() == tag)
-//		 //		{
-//		 //			printToast("重复",1);
-//		 //		}
-//		 else
-//		 {
-//		 for(Fragment f: manager.getFragments())
-//		 {
-//		 if(f.getTag() == tag)
-//		 {
-//		 if(currentFragment.getTag() != tag)
-//		 {
-//		 transaction
-//		 .hide(currentFragment)
-//		 .show(manager.findFragmentByTag(tag))
-//		 .commit();
-//		 currentFragment = targetFragment;
-//		 }
-//		 printToast("重复",1);
-//		 }
-//		 else
-//		 {
-//		 transaction
-//		 .hide(currentFragment)
-//		 .add(id, targetFragment, tag)
-//		 .commit();
-//
-//		 printToast("添加成功",1);
-//
-//		 currentFragment = targetFragment;
-//		 }
-//		 }*/
-//		/*
-//		 if (currentFragment.getBaseTag() != targetFragment.getBaseTag()) {
-//		 Log.v("srt","add");
-//		 transaction
-//		 .hide(manager.findFragmentByTag(currentFragment.getTag()))
-//		 .add(id, targetFragment, tag)
-//		 .commit();
-//		 printToast("还没添加呢",1);
-//		 currentFragment = targetFragment;
-//		 } 
-//		 else {
-//		 Log.v("srt","show");
-//		 transaction
-//		 .hide(currentFragment)
-//		 .show((BaseFragment)manager.findFragmentByTag(tag))
-//		 .commit();
-//		 printToast("添加了( ⊙o⊙ )哇",1);
-//		 currentFragment = targetFragment;
-//		 }
-//
-//		 */
-//		
-//	}
-
 }

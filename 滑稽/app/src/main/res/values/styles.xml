@@ -22,4 +22,10 @@
         <item name="android:windowFullscreen">true</item>//全屏即无通知栏
         <item name="android:windowContentOverlay">@null</item>//是否有遮盖
     </style>
+	
+	<style name="NavMenuStyle">
+		<item name="android:textColor">@drawable/navigation_menu_item_color</item>
+	</style>
+	
+	
 </resources>  
