@@ -18,16 +18,8 @@ public class IndexActivity extends Activity
 		setContentView(R.layout.loading);
 
 		Timer timer = new Timer();
-		//timer.schedule(task, 3000);
+		timer.schedule(task, 3000);
 		
-		
-		try{
-			startActivity(new Intent(getApplicationContext(), MainActivity.class));
-		}
-		catch(Throwable e)
-		{
-			print(e.toString());
-		}
 	}
 	
 	public void print(String s)
@@ -48,7 +40,7 @@ public class IndexActivity extends Activity
 //			}
 //			else
 //			{
-//				startActivity(new Intent(getApplicationContext(), MainActivity.class));
+				startActivity(new Intent(getApplicationContext(), MainActivity.class));
 //			}
 			finish();
 		}

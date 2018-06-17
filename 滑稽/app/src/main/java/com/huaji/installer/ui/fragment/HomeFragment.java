@@ -1,5 +1,6 @@
 package com.huaji.installer.ui.fragment;
 
+import android.content.*;
 import android.os.*;
 import android.support.v4.app.*;
 import android.support.v7.widget.*;
@@ -20,6 +21,8 @@ public class HomeFragment extends Fragment
 	Calendar calendar = new GregorianCalendar();
 	TimeZone timeZone = calendar.getTimeZone();
 	private CompactCalendarView calendarView;
+	private CardView MRYW;
+	private ClickEvent clickevent = new ClickEvent();
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -29,19 +32,37 @@ public class HomeFragment extends Fragment
 		/*View ac = inflater.inflate(R.layout.activity_main,null);
 		CompactCalendarView mCalendar = (CompactCalendarView) v.findViewById(R.id.compactcalendar_view);*/
 		calendarView = ((MainActivity) getActivity()).getCalendar();
+		
 		setHasOptionsMenu(true);
-		
 		getActivityToolbar().hideOverflowMenu();
-		
 		initCalendar();
-
+		
+		MRYW = (CardView) view.findViewById(R.id.fragment_homeMRYW);
+		MRYW.setOnClickListener(clickevent);
+		
+		
 		return view;
+	}
+	
+	class ClickEvent implements View.OnClickListener
+	{
+		@Override
+		public void onClick(View p1)
+		{
+			// TODO: Implement this method
+			switch(p1.getId())
+			{
+				case R.id.fragment_homeMRYW:
+					startActivity(new Intent(getActivity().getApplicationContext(),ArticleActivity.class));
+			}
+		}
+		
 	}
 
 	private void initCalendar()
 	{
 		// TODO: Implement this method
-		getActivityToolbar().setTitle(dateFormatForMonth.format(new Date()));
+		getActivityToolbar().setSubtitle(dateFormatForMonth.format(new Date()));
 		calendarView.setVisibility(View.VISIBLE);
 		calendarView.showCalendar();
 		calendarView.setLocale(timeZone,Locale.CHINESE);
@@ -50,13 +71,13 @@ public class HomeFragment extends Fragment
 				@Override
 				public void onDayClick(Date dateClicked)
 				{
-					getActivityToolbar().setTitle(dateFormatForMonth.format(dateClicked));
+					getActivityToolbar().setSubtitle(dateFormatForMonth.format(dateClicked));
 				}
 
 				@Override
 				public void onMonthScroll(Date firstDayOfNewMonth)
 				{
-					getActivityToolbar().setTitle(dateFormatForMonth.format(firstDayOfNewMonth));
+					getActivityToolbar().setSubtitle(dateFormatForMonth.format(firstDayOfNewMonth));
 				}
 			});
 

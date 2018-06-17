@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/activity_article_about"
+        android:title="关于"/>
+	
+	<item
+		android:id="@+id/activity_article_newoneText"
+		android:title="再来一篇"/>
+	
+	<item
+		android:id="@+id/activity_article_newone"
+		/>
+    
+</menu>

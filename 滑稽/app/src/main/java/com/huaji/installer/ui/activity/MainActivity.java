@@ -70,6 +70,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         toggle.syncState();
 
 		setExitMode(EXIT_MODE_TWICE);
+		
+		nav.setCheckedItem(R.id.nav_homepage);
+		switchFragment(homeFragment,R.id.activity_mainFrameLayout1,"homeFragment");
 
 	}
 
@@ -124,7 +127,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 	{
 		toolbar.setTitle("轻-工具");
 		setSupportActionBar(toolbar);
-
+		toolbar.setSubtitleTextColor(new Color().parseColor("#FFFFFF"));
 	}
 
 	@Override

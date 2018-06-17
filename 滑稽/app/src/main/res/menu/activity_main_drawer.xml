@@ -9,15 +9,15 @@
             android:title="主页" />
         <item
             android:id="@+id/nav_study"
-			
+			android:icon="@drawable/nav_study"
             android:title="学习" />
 		<item
 			android:id="@+id/nav_music"
-			
+			android:icon="@drawable/nav_music"
 			android:title="音乐" />
         <item
             android:id="@+id/nav_fiction"
-			
+			android:icon="@drawable/nav_fiction"
             android:title="小说" />
 		<item 
 			android:id="@+id/nav_net"
